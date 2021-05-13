@@ -3,14 +3,14 @@ var tableData = data;
 
 // YOUR CODE HERE!
 // Select the button
-var button = d3.select("#button");
-
+var button = d3.select("#filter-btn");
+console.log(button)
 // Select the form
 var form = d3.select("#form");
-
+console.log(form)
 // Create event handlers 
 button.on("click", sortTable);
-form.on("submit",sortTable);
+form.on("submit", sortTable);
 
 function sortTable () {
     //stops page from refreshing
