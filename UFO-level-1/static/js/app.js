@@ -19,6 +19,10 @@ function sortTable () {
     //assign user input to var
     var userInput = d3.select("#date-input");
 
+    //get value from userInput
     var inputValue = userInput.property("value");
-    
+
+    console.log(userInput);
+    console.log(tableData);
+
 };
