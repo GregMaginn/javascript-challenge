@@ -33,12 +33,13 @@ function handleClick(){
 
     userFilter.forEach(datetime => {
         row = tbody.append('tr');
-        Object.values(entry).forEach(value => {
-            var cell = row.append('td');
-            cell.text(value);
+    Object.values(datetime).forEach(value => {
+        var cell = row.append('td');
+        cell.text(value);
 
     });
-    }
+    })
 }
+
 
 
