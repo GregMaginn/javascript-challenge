@@ -22,7 +22,12 @@ function sortTable () {
     //get value from userInput
     var inputValue = userInput.property("value");
 
+    //checking
     console.log(userInput);
     console.log(tableData);
 
+    //filter data based on user input of date
+    var filteredData = data.filter(entry => entry.datetime = inputValue);
+
+    console.log(filteredData);
 };
