@@ -26,33 +26,19 @@ function handleClick(){
     var userInput = d3.select("#datetime");
     var inputValue = userInput.property("value");
 
-    var userFilter = tableData.filter(dat)
+    var userFilter = tableData.filter(a => a.datetime === inputValue)
+
+    //clear previous table
+    tbody.html('');
+
+    userFilter.forEach(datetime => {
+        row = tbody.append('tr');
+        Object.values(entry).forEach(value => {
+            var cell = row.append('td');
+            cell.text(value);
+
+    });
+    }
 }
-var button = d3.select("#filter-btn");
-console.log(button)
-// Select the form
-var form = d3.select("#form");
-console.log(form)
-// Create event handlers 
-button.on("click", sortTable);
-form.on("submit", sortTable);
 
-function sortTable () {
-    //stops page from refreshing
-    d3.event.preventDefault();
 
-    //assign user input to var
-    
-
-    //get value from userInput
-    
-
-    //checking
-    console.log(userInput);
-    console.log(tableData);
-
-    //filter data based on user input of date
-    var filteredData = data.filter(entry => entry.datetime = inputValue);
-
-    console.log(filteredData);
-};
